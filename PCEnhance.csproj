@@ -70,15 +70,8 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNote_Patch.cs" />
-    <Compile Include="CharaListAvailabeFeatsPatch.cs" />
-    <Compile Include="FeatPatch.cs" />
-    <Compile Include="GodArtifactLimitRemove.cs" />
-    <Compile Include="IsEffective_Patch.cs" />
-    <Compile Include="OnEquip_Patch.cs" />
-    <Compile Include="OnGameInstantiated_Patch.cs" />
-    <Compile Include="OnLoad_Patch.cs" />
-    <Compile Include="OnUnequip_Patch.cs" />
+    <Compile Include="DemigodFeatPatch.cs" />
+    <Compile Include="GetFeatPatch.cs" />
     <Compile Include="PCEnhance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,24 +4,11 @@ using UnityEngine;
 
 namespace PCEnhance
 {
-    internal static class ModInfo
-    {
-        internal const string Guid = "dk.elinplugins.myelinmod";
-        internal const string Name = "My Elin Mod";
-        internal const string Version = "1.0";
-    }
-
     [BepInPlugin("zh.PCEnhanceMod", "PCEnhanceMod", "0.1.0")]
     public class PCEnhance : BaseUnityPlugin
     {
-        private void Start()
-        {
-            var harmony = new Harmony("zh.PCEnhanceMod");
-            harmony.PatchAll();
-        }
-        public void OnStartCore()
-        {
-            FeatPatch.OnStartCore();
-        }
+        private void Awake() => new Harmony(nameof(PCEnhance)).PatchAll();
+        // OnStartCore() 是 Elin 游戏在启动后、进行数据初始化之前，自动调用的 Mod 专用方法。
+        public void OnStartCore() => GetFeatPatch.GetFeat();
     }
 }
